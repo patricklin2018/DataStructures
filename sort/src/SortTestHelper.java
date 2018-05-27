@@ -1,5 +1,3 @@
-import com.sun.org.apache.xalan.internal.xsltc.compiler.util.CompareGenerator;
-
 import java.lang.reflect.Method;
 
 /**
@@ -92,7 +90,7 @@ public class SortTestHelper {
             sortMethod.invoke(null, params);
             long endTime = System.currentTimeMillis();
 
-            assert isSorted(arr);
+                assert isSorted(arr);
 
             System.out.println(sortClass.getSimpleName() + " : " + (endTime - startTime) + " ms");
         }
