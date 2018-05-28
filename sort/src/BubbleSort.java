@@ -4,8 +4,14 @@
  *
  * 冒泡排序
  *
+ * 时间复杂度 = O(n^2)
+ * 最坏情况下 O(n^2)
+ * 最好情况下 O(n)
+ * 空间复杂度 = O(1)
+ * 稳定性 = false
  *
  */
+
 public class BubbleSort {
 
     private BubbleSort() {}
