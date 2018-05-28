@@ -18,8 +18,11 @@
 | BubbleSort | 冒泡排序 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/sort/src/BubbleSort.java) |
 | BubbleSort2 | 记录上一次冒泡终止位置，下一轮对其之后元素进行忽略 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/sort/src/BubbleSort2.java)|
 
-#### 结果
+#### 实验
 
+基础排序算法的时间效率比较: [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/sort/src/BasicSortTest.java)
+
+结果如下：
 ```
 Test for random array, size = 20000, random range [0, 20000]
 SelectionSort : 417 ms
@@ -64,7 +67,11 @@ BubbleSort2 : 1219 ms
 | QuickSort2Ways | 二路快速排序 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/sort/src/QuickSort2Ways.java)|
 | QuickSort3Ways | 三路快速排序 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/sort/src/QuickSort3Ways.java)|
 
-#### 结果
+#### 实验
+
+高级排序算法的时间效率比较: [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/sort/src/AdvancedSortTest.java)
+
+结果如下：
 ```
 经过 100 组大小为 1000000 的数据测试，结果如下：
 ShellSort 平均时间 = 884 ms
