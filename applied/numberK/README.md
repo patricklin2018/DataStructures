@@ -11,7 +11,8 @@
 根据三路快速排序的思想，求出 partition 操作后，大于或小于标定的索引，并根据该索引缩小查找的范围。
 
 #### 实现
-[Java]()
+实现类 - [numberK.java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/applied/numberK/numberK.java)
+测试辅助用类 - [TestHelper.java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/applied/numberK/TestHelper.java)
 
 #### 实验
 ```
