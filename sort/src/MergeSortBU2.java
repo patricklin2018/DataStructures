@@ -4,7 +4,11 @@ import java.util.Arrays;
  * Created by Patrick
  * 2018/5/28 12:02
  *
- * 归并排序-自底向上 优化
+ * 归并排序-自底向上-优化
+ *
+ * 优化 1： 规模较小时，采用插入排序
+ * 优化 2： 左边区间的最大值 小于 右边区间的最小值时省略 merge 计算
+ *
  */
 public class MergeSortBU2 {
 

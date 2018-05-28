@@ -29,10 +29,8 @@ public class MergeSortBU {
         Integer[] arr1 = SortTestHelper.generateRandomArray(N, 0, N);
         Integer[] arr2 = Arrays.copyOf(arr1, arr1.length);
         Integer[] arr3 = Arrays.copyOf(arr1, arr1.length);
-        Integer[] arr4 = Arrays.copyOf(arr1, arr1.length);
-        SortTestHelper.testSort("ShellSort", arr1);
-        SortTestHelper.testSort("MergeSort", arr2);
-        SortTestHelper.testSort("MergeSort2", arr3);
-        SortTestHelper.testSort("MergeSortBU", arr4);
+        SortTestHelper.testSort("MergeSort", arr1);
+        SortTestHelper.testSort("MergeSort2", arr2);
+        SortTestHelper.testSort("MergeSortBU", arr3);
     }
 }

@@ -40,7 +40,7 @@ public class QuickSort {
 
     /**
      * 对 arr 的 [left, right] 区间进行 partition 操作
-     * 选定 arr[left] 作为 partition 操作依据
+     * 选定 arr[left] 作为 partition 操作标定
      * 返回 p，使得 arr[left, p - 1] <= arr[p] && arr[p] <= arr[p + 1, right]
      * @param arr
      * @param left
@@ -48,7 +48,7 @@ public class QuickSort {
      * @return
      */
     public static int partition(Comparable[] arr, int left, int right) {
-        // 选定第一个元素作为 partition 依据
+        // 选定第一个元素作为 partition 标定
         Comparable e = arr[left];
 
         int p = left;

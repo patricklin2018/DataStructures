@@ -77,7 +77,7 @@ public class SortTestHelper {
     /**
      * 测试 sortClassName 所对应的排序算法，排序 arr 数组所得到的结果的正确性和算法运行时间
      */
-    public static void testSort(String sortClassName, Comparable[] arr) {
+    public static long testSort(String sortClassName, Comparable[] arr) {
         // 通过反射机制，查找排序类名称
         try {
             Class sortClass = Class.forName(sortClassName);
@@ -90,13 +90,16 @@ public class SortTestHelper {
             sortMethod.invoke(null, params);
             long endTime = System.currentTimeMillis();
 
-                assert isSorted(arr);
+            assert isSorted(arr);
 
             System.out.println(sortClass.getSimpleName() + " : " + (endTime - startTime) + " ms");
+
+            return (endTime - startTime);
         }
         catch (Exception e) {
             e.printStackTrace();
         }
 
+        return 0;
     }
 }
