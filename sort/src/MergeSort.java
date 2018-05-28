@@ -5,11 +5,24 @@ import java.util.Arrays;
  * 2018/5/27 16:15
  *
  * 归并排序
+ *
+ * 时间复杂度 = O(nlogn)
+ * 最坏情况下 O(nlogn)
+ * 最好情况下 O(nlogn)
+ * 空间复杂度 = O(n)
+ * 稳定性 = true
+ *
  */
 
 public class MergeSort {
     private MergeSort() {}
 
+    /**
+     * 对 arr 数组的 [left, right] 范围进行归并排序
+     * @param arr 排序数组
+     * @param left 左边界
+     * @param right 右边界
+     */
     private static void sort(Comparable[] arr, int left, int right) {
         if (left >= right) {
             return;
@@ -28,7 +41,14 @@ public class MergeSort {
         sort(arr, 0, size - 1);
     }
 
-    private static void merge(Comparable[] arr, int left, int mid, int right) {
+    /**
+     * 对 arr 数组的 [left, mid] 和 [mid + 1, right] 区间进行归并
+     * @param arr
+     * @param left
+     * @param mid
+     * @param right
+     */
+    public static void merge(Comparable[] arr, int left, int mid, int right) {
         // backup range [left, right + 1)
         Comparable[] backup = Arrays.copyOfRange(arr, left, right + 1);
 

@@ -2,9 +2,15 @@ import java.util.Arrays;
 
 /**
  * Created by Patrick
- * 2018/5/27 16:15
+ * 2018/5/28 01:00
  *
  * 归并排序优化
+ *
+ * 时间复杂度 = O(n^2)
+ * 最坏情况下 O(n^2)
+ * 最好情况下 O(n^2)
+ * 空间复杂度 = O(1)
+ * 稳定性 = false
  *
  */
 
@@ -23,39 +29,14 @@ public class MergeSort2 {
             return;
         }
 
-//        int mid = (right - left) / 2 + left;
-        int mid = (left + right) / 2;
+        int mid = (right - left) / 2 + left;
 
         sort(arr, left, mid);
         sort(arr, mid + 1, right);
 
         // 优化2：左边部分的最大元素 小于 右边部分最小元素时，省略 merge 计算
         if (arr[mid].compareTo(arr[mid + 1]) > 0) {
-            merge(arr, left, mid, right);
-        }
-    }
-
-    private static void merge(Comparable[] arr, int left, int mid, int right) {
-        Comparable[] buffer = Arrays.copyOfRange(arr, left, right + 1);
-
-        int i = left, j = mid + 1;
-        for (int k = left; k <= right; ++k) {
-            if (i > mid) {
-                arr[k] = buffer[j - left];
-                j++;
-            }
-            else if (j > right) {
-                arr[k] = buffer[i - left];
-                i++;
-            }
-            else if (buffer[i - left].compareTo(buffer[j - left]) < 0) {
-                arr[k] = buffer[i - left];
-                i++;
-            }
-            else {
-                arr[k] = buffer[j - left];
-                j++;
-            }
+            MergeSort.merge(arr, left, mid, right);
         }
     }
 
