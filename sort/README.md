@@ -54,6 +54,7 @@ BubbleSort2 : 1219 ms
 | 希尔排序 | O(nlogn) | O(n^2) | O(n) | O(1) | 不稳定 |
 | 归并排序 | O(nlogn) | O(nlogn) | O(nlogn) | O(n) | 稳定 |
 | 快速排序 | O(nlogn) | O(n^2) | O(nlogn) | O(nlogn) | 不稳定 |
+| 堆排序   | O(nlogn) | O(nlogn) | O(nlogn) | O(1) | 不稳定 |
 
 #### 实现
 |  排序算法  | 备注 | 代码 |

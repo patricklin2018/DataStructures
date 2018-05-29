@@ -26,6 +26,26 @@ public class MaxHeap<Item extends Comparable> {
     }
 
     /**
+     * 通过 Heapify 数组建堆
+     * @param arr 数组
+     */
+    public MaxHeap(Item[] arr) {
+        int size = arr.length;
+
+        data = (Item[]) new Comparable[size + 1];
+        capacity = size;
+        for (int i = 0; i < size; ++i) {
+            data[i + 1] = arr[i];
+        }
+        counter = size;
+
+        // Heapify
+        for (int i = counter / 2; i >= 1; --i) {
+            shiftDown(i);
+        }
+    }
+
+    /**
      * @return 返回元素个数
      */
     public int size() {

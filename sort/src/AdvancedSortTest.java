@@ -15,7 +15,7 @@ public class AdvancedSortTest{
         int T = 100;
         int N = 1000000;
 
-        long time1 = 0, time2 = 0, time3 = 0, time4 = 0, time5 = 0, time6 = 0, time7 = 0, time8 = 0;
+        long time1 = 0, time2 = 0, time3 = 0, time4 = 0, time5 = 0, time6 = 0, time7 = 0, time8 = 0, time9 = 0, time10 = 0;
 
         for (int i = 0; i < T; ++i) {
             System.out.println("第 " + (i + 1) + " 组数据：");
@@ -28,6 +28,8 @@ public class AdvancedSortTest{
             Integer[] arr6 = Arrays.copyOf(arr1, arr1.length);
             Integer[] arr7 = Arrays.copyOf(arr1, arr1.length);
             Integer[] arr8 = Arrays.copyOf(arr1, arr1.length);
+            Integer[] arr9 = Arrays.copyOf(arr1, arr1.length);
+            Integer[] arr10 = Arrays.copyOf(arr1, arr1.length);
 
             time1 += SortTestHelper.testSort("ShellSort", arr1);
             time2 += SortTestHelper.testSort("MergeSort", arr2);
@@ -37,6 +39,8 @@ public class AdvancedSortTest{
             time6 += SortTestHelper.testSort("QuickSort2", arr6);
             time7 += SortTestHelper.testSort("QuickSort2Ways", arr7);
             time8 += SortTestHelper.testSort("QuickSort3Ways", arr8);
+            time9 += SortTestHelper.testSort("HeapSort", arr9);
+            time10 += SortTestHelper.testSort("HeapSort2", arr10);
 
             System.out.println();
         }
@@ -50,5 +54,7 @@ public class AdvancedSortTest{
         System.out.println("QuickSort2 平均时间 = " + time6 / T + " ms");
         System.out.println("QuickSort2Ways 平均时间 = " + time7 / T + " ms");
         System.out.println("QuickSort3Ways 平均时间 = " + time8 / T + " ms");
+        System.out.println("HeapSort 平均时间 = " + time9 / T + " ms");
+        System.out.println("HeapSort2 平均时间 = " + time10 / T + " ms");
     }
 }
