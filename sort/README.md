@@ -67,6 +67,10 @@ BubbleSort2 : 1219 ms
 | QuickSort2 | 1,小规模数据直接插入排序 2,partition标定采用随机策略，增强稳定性 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/sort/src/QuickSort2.java)|
 | QuickSort2Ways | 二路快速排序 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/sort/src/QuickSort2Ways.java)|
 | QuickSort3Ways | 三路快速排序 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/sort/src/QuickSort3Ways.java)|
+| HeapSort | 堆排序 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/heap/src/HeapSort.java)|
+| HeapSort2 | 通过 Heapfiy 数组建堆替代一个个元素进堆 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/heap/src/HeapSort2.java)|
+| HeapSort3 | 将堆转数组，省略出堆到数组的额外空间 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/heap/src/HeapSort3.java)|
+
 
 #### 实验
 
@@ -75,13 +79,16 @@ BubbleSort2 : 1219 ms
 结果如下：
 ```
 经过 100 组大小为 1000000 的数据测试，结果如下：
-ShellSort 平均时间 = 884 ms
-MergeSort 平均时间 = 304 ms
-MergeSort2 平均时间 = 250 ms
-MergeSort3 平均时间 = 238 ms
-QuickSort 平均时间 = 227 ms
-QuickSort2 平均时间 = 212 ms
-QuickSort2Ways 平均时间 = 208 ms
-QuickSort3Ways 平均时间 = 373 ms
+ShellSort 平均时间 = 857 ms
+MergeSort 平均时间 = 322 ms
+MergeSort2 平均时间 = 261 ms
+MergeSort3 平均时间 = 225 ms
+QuickSort 平均时间 = 208 ms
+QuickSort2 平均时间 = 197 ms
+QuickSort2Ways 平均时间 = 196 ms
+QuickSort3Ways 平均时间 = 330 ms
+HeapSort 平均时间 = 497 ms
+HeapSort2 平均时间 = 497 ms
+HeapSort3 平均时间 = 477 ms
 ```
 

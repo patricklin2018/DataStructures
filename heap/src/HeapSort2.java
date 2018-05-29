@@ -6,6 +6,9 @@
  *
  * 优化： 利用数组建堆 Heapify，省略进堆的过程
  *
+ * 将 n 个元素逐个插入到空堆中，时间复杂度 = O(nlogn)
+ * 通过 Heapify 数组构建堆过程，时间复杂度 = O(n)
+ *
  */
 
 public class HeapSort2 {

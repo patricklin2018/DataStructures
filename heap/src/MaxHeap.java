@@ -9,6 +9,7 @@
 public class MaxHeap<Item extends Comparable> {
 
     // 数据存储
+    // 从 1 开始索引
     protected Item[] data;
     // 数据量
     protected int counter;
@@ -39,7 +40,10 @@ public class MaxHeap<Item extends Comparable> {
         }
         counter = size;
 
-        // Heapify
+        /**
+         * Heapify
+         * 时间复杂度 = O(n)
+         */
         for (int i = counter / 2; i >= 1; --i) {
             shiftDown(i);
         }
