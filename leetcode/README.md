@@ -1,21 +1,5 @@
-# DataStructures-Algorithmns
-
-### 经典算法问题
-
-| 问题  | 链接 |
-|---|---|
-|  排序问题 | [Sort](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/sort) |
-|  堆问题 | [Heap](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/heap) |
-
-### 算法应用问题
-
-| 问题 | 描述 | 分类 | 实现 |
-|---|---|---|---|
-| Number K  | 求任意数组的第K大元素 | 数组、快排 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/applied/numberK)| 
-
 ### LeetCode
-
-[链接 - LeetCode 目录](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/leetcode)
+***
 
 |#|Title|Difficulty|代码|
 |:-:|:---:|:--------:|:--:|
@@ -88,3 +72,5 @@
 |436|Find Right Interval|Medium|[C++](https://github.com/PatrickLin1993/LeetCode/tree/master/Algorithmn/436%20-%20Find%20Right%20Interval)|
 |441|Arranging Coins|Easy|[C++](https://github.com/PatrickLin1993/LeetCode/tree/master/Algorithmn/441%20-%20Arranging%20Coins)|
 |462|Minimum Moves to Equal Array Elements II|Medium|[C++](https://github.com/PatrickLin1993/LeetCode/tree/master/Algorithmn/462%20-%20Minimum%20Moves%20to%20Equal%20Array%20Elements%20II)|
+
+
