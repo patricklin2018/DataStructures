@@ -1,7 +1,5 @@
 # 堆问题
 
-### 简介
-
 ### 实现
 | 问题 | 备注 | 链接 |
 |---|---|---|
@@ -10,5 +8,5 @@
 | HeapSort | 堆排序 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/heap/src/HeapSort.java)|
 | HeapSort2 | 通过 Heapfiy 数组建堆替代一个个元素进堆 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/heap/src/HeapSort2.java)|
 | HeapSort3 | 将堆转数组，省略出堆到数组的额外空间 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/heap/src/HeapSort3.java)|
-
-### 实验
+| IndexMaxHeap | 最大索引堆，增加索引，替代直接的数据交换 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/heap/src/IndexMaxHeap.java)|
+| MinHeap | 最小堆 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/heap/src/MinHeap.java)|

@@ -102,23 +102,30 @@ public class MaxHeap<Item extends Comparable> {
 
     /**
      * 对数组索引为 k 的值进行 shiftUp 操作
+     * 采用移动的方式替代 swap 交换
      * @param k 数组索引
      */
     private void shiftUp(int k) {
-        while (k > 1 && data[k].compareTo(data[k/2]) > 0) {
-            swap(k, k/2);
+
+        Item e = data[k];
+        while (k > 1 && e.compareTo(data[k/2]) > 0) {
+            data[k] = data[k / 2];
             k /= 2;
         }
+        data[k] = e;
     }
 
     /**
      * 对数组索引为 k 的值进行 shiftDown 操作
+     * 采用移动的方式替代 swap 交换
      * @param k
      */
     private void shiftDown(int k) {
+
+        Item e = data[k];
         while(k * 2 <= counter) {
             int j = k * 2;
-            if (j + 1 <= counter && data[j].compareTo(data[j + 1]) < 0) {
+            if (j + 1 <= counter && e.compareTo(data[j + 1]) < 0) {
                 j++;
             }
 

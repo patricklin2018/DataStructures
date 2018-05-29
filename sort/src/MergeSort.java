@@ -64,6 +64,9 @@ public class MergeSort {
                 arr[k] = backup[i - left];
                 i++;
             }
+            /**
+             * 这里需要使用 <= ，保持归并排序的稳定性，否则将被破坏
+             */
             else if (backup[i - left].compareTo(backup[j - left]) <= 0) {
                 arr[k] = backup[i - left];
                 i++;
