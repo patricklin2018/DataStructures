@@ -4,8 +4,7 @@
  *
  * 二分搜索树
  *
- * 递归 insert
- * 递归 contain
+ * 递归实现
  *
  **/
 
@@ -76,6 +75,27 @@ public class BST<Key extends Comparable<Key>, Value> {
      */
     public Value search(Key key) {
         return search(root, key);
+    }
+
+    /**
+     * 前序遍历
+     */
+    public void preOrder() {
+        preOrder(root);
+    }
+
+    /**
+     * 中序遍历
+     */
+    public void inOrder() {
+        inOrder(root);
+    }
+
+    /**
+     * 后序遍历
+     */
+    public void postOrder() {
+        postOrder(root);
     }
 
     /**
@@ -154,35 +174,66 @@ public class BST<Key extends Comparable<Key>, Value> {
         }
     }
 
+    /**
+     * 以 node 为根节点的树进行前序遍历
+     * @param node
+     */
+    private void preOrder(Node node) {
+        if (node != null) {
+            System.out.println(node.value);
+            preOrder(node.left);
+            preOrder(node.right);
+        }
+    }
+
+    private void inOrder(Node node) {
+        if (node != null) {
+            inOrder(node.left);
+            System.out.println(node.value);
+            inOrder(node.right);
+        }
+    }
+
+    private void postOrder(Node node) {
+        if (node != null) {
+            postOrder(node.left);
+            postOrder(node.right);
+            System.out.println(node.value);
+        }
+    }
+
+
+    // 测试二分搜索树的前中后序遍历
     public static void main(String[] args) {
 
-        int N = 1000000;
+        BST<Integer, Integer> bst = new BST<>();
 
-        // 创建一个数组，包含[0...N)的所有元素
-        Integer[] arr = new Integer[N];
-        for(int i = 0 ; i < N ; i ++)
-            arr[i] = new Integer(i);
-
-        // 打乱数组顺序
-        for(int i = 0 ; i < N ; i ++) {
-            int pos = (int) (Math.random() * (i + 1));
-            Integer t = arr[pos];
-            arr[pos] = arr[i];
-            arr[i] = t;
+        int N = 10;
+        int M = 100;
+        for(int i = 0 ; i < N ; i ++){
+            Integer key = new Integer((int)(Math.random()*M));
+            bst.insert(key, key);
+            System.out.print(key + " ");
         }
+        System.out.println();
 
-        BST<Integer,String> bst = new BST<>();
-        for(int i = 0 ; i < N ; i ++)
-            bst.insert(new Integer(arr[i]), Integer.toString(arr[i]));
+        // 测试二分搜索树的size()
+        System.out.println("size: " + bst.size());
+        System.out.println();
 
-        for(int i = 0 ; i < 2*N ; i ++){
-            String res = bst.search(new Integer(i));
-            if( i < N )
-                assert res.equals(Integer.toString(i));
-            else
-                assert res == null;
-        }
+        // 测试二分搜索树的前序遍历 preOrder
+        System.out.println("preOrder: ");
+        bst.preOrder();
+        System.out.println();
 
-        System.out.println("测试通过!");
+        // 测试二分搜索树的中序遍历 inOrder
+        System.out.println("inOrder: ");
+        bst.inOrder();
+        System.out.println();
+
+        // 测试二分搜索树的后序遍历 postOrder
+        System.out.println("postOrder: ");
+        bst.postOrder();
+        System.out.println();
     }
 }
