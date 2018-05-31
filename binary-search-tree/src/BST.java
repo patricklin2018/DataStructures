@@ -26,6 +26,13 @@ public class BST<Key extends Comparable<Key>, Value> {
             this.value = value;
             left = right = null;
         }
+
+        public Node(Node newNode) {
+            this.key = newNode.key;
+            this.value = newNode.value;
+            this.left = newNode.left;
+            this.right = newNode.right;
+        }
     }
 
     // 根节点
@@ -159,6 +166,14 @@ public class BST<Key extends Comparable<Key>, Value> {
         if (root != null) {
             root = removeMax(root);
         }
+    }
+
+    /**
+     * 从二分搜索树中，找到 key 并删除
+     * @param key
+     */
+    public void remove(Key key) {
+        root = remove(root, key);
     }
 
     /**
@@ -305,42 +320,82 @@ public class BST<Key extends Comparable<Key>, Value> {
         return node;
     }
 
-    // 测试二分搜索树的前中后序遍历
+    private Node remove(Node node, Key key) {
+        if (node == null) {
+            return null;
+        }
+
+        int result = node.key.compareTo(key);
+        if (result > 0) {
+            node.left = remove(node.left, key);
+            return node;
+        }
+        else if (result < 0) {
+            node.right = remove(node.right, key);
+            return node;
+        }
+        else {
+            if (node.left == null) {
+                Node right = node.right;
+                node.right = null;
+                counter--;
+                return right;
+            }
+            else if (node.right == null) {
+                Node left = node.left;
+                node.left = null;
+                counter--;
+                return left;
+            }
+            else {
+                // 左右子节点都在
+
+                Node successor = new Node(minimum(node.right));
+
+                successor.left = node.left;
+                successor.right = removeMin(node.right);
+
+                node.left = node.right = null;
+
+                return successor;
+            }
+        }
+    }
+
+    // 测试二分搜索树
     public static void main(String[] args) {
 
         BST<Integer, Integer> bst = new BST<>();
 
-        int N = 10;
-        int M = 100;
+        int N = 10000;
         for(int i = 0 ; i < N ; i ++){
-            Integer key = new Integer((int)(Math.random()*M));
+            Integer key = new Integer((int)(Math.random()*N));
             bst.insert(key, key);
-            System.out.print(key + " ");
         }
-        System.out.println();
 
-        // 测试二分搜索树的size()
-        System.out.println("size: " + bst.size());
-        System.out.println();
+        Integer order[] = new Integer[N];
+        for( int i = 0 ; i < N ; i ++ )
+            order[i] = new Integer(i);
 
-        // 测试二分搜索树的前序遍历 preOrder
-        System.out.println("preOrder: ");
-        bst.preOrder();
-        System.out.println();
+        // 打乱order数组的顺序
+        for(int i = order.length-1 ; i >= 0 ; i --){
+            int pos = (int) (Math.random() * (i+1));
+            int t = order[pos];
+            order[pos] = order[i];
+            order[i] = t;
+        }
 
-        // 测试二分搜索树的中序遍历 inOrder
-        System.out.println("inOrder: ");
-        bst.inOrder();
-        System.out.println();
 
-        // 测试二分搜索树的后序遍历 postOrder
-        System.out.println("postOrder: ");
-        bst.postOrder();
-        System.out.println();
+        System.out.println("Initial size = " + bst.size() );
 
-        // 测试二分搜索树的后序遍历 levelOrder
-        System.out.println("levelOrder: ");
-        bst.levelOrder();
-        System.out.println();
+        // 乱序删除[0...n)范围里的所有元素
+        for( int i = 0 ; i < N ; i ++ )
+            if( bst.contain( order[i] )){
+                bst.remove( order[i] );
+                System.out.println("After remove " + order[i] + " size = " + bst.size() );
+            }
+
+        // 最终整个二分搜索树应该为空
+        System.out.println(bst.size());
     }
 }
