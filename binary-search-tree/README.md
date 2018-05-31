@@ -16,7 +16,7 @@
 |---|---|---|
 | BinarySearch | 二分搜索（递归） | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/binary-search-tree/src/BinarySearch.java)|
 | BinarySearc2 | 二分搜索（非递归）|[Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/binary-search-tree/src/BinarySearch2.java)|
-| BST | 二分搜索树（递归） | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/binary-search-tree/src/BST.java)|
-| BST2 | 二分搜索树（非递归） | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/binary-search-tree/src/BST2.java) |
+| BST | 二分搜索树（递归实现前中后层次遍历等各种方法） | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/binary-search-tree/src/BST.java)|
+| BST2 | 二分搜索树（非递归实现前中后层次遍历等各种方法） | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/binary-search-tree/src/BST2.java) |
 | BSTandSST | 二分搜索树和顺序查找表在搜索时间的效率比较 | [BSTandSST](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/binary-search-tree/src/BSTandSST)|
 
