@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 /**
@@ -198,7 +200,7 @@ public class BST2<Key extends Comparable<Key>, Value> {
         Stack<Node> stack = new Stack<>();
         // 输出辅助栈，记住入栈顺序
         Stack<Node> out = new Stack<>();
-        
+
         Node i = root;
 
         while (!stack.isEmpty() || i != null) {
@@ -215,6 +217,97 @@ public class BST2<Key extends Comparable<Key>, Value> {
 
         while (!out.isEmpty()) {
             System.out.println(out.pop().value);
+        }
+    }
+
+    /**
+     * 层序遍历
+     */
+    public void levelOrder() {
+        if (root == null) {
+            return;
+        }
+
+        Queue<Node> queue = new LinkedList<>();
+        queue.offer(root);
+
+        while (!queue.isEmpty()) {
+            Node node = queue.poll();
+            System.out.println(node.value);
+
+            if (node.left != null) {
+                queue.offer(node.left);
+            }
+            if (node.right != null) {
+                queue.offer(node.right);
+            }
+        }
+    }
+
+    public Key minimum() {
+        assert counter > 0;
+
+        Node i = root;
+        while (true) {
+            if (i.left == null) {
+                return i.key;
+            }
+            i = i.left;
+        }
+    }
+
+    public Key maximum() {
+        assert counter > 0;
+
+        Node i = root;
+        while (true) {
+            if (i.right == null) {
+                return i.key;
+            }
+            i = i.right;
+        }
+    }
+
+    public void removeMin() {
+        if (root == null) {
+            return;
+        }
+
+        Node i = root;
+        Node parent = null;
+        while (true) {
+            if (i.left == null) {
+                Node right = i.right;
+                i.right = null;
+                counter--;
+                if (parent != null) {
+                    parent.left = right;
+                }
+                return;
+            }
+            parent = i;
+            i = i.left;
+        }
+    }
+
+    public void removeMax() {
+        if (root == null) {
+            return;
+        }
+
+        Node i = root;
+        Node parent = null;
+        while (true) {
+            if (i.right == null) {
+                Node left = i.left;
+                i.left = null;
+                counter--;
+                if (parent != null) {
+                    parent.right = left;
+                }
+            }
+            parent = i;
+            i = i.right;
         }
     }
 

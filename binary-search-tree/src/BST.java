@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * created by PATRICK
  * 2018/5/30 22:13
@@ -96,6 +99,66 @@ public class BST<Key extends Comparable<Key>, Value> {
      */
     public void postOrder() {
         postOrder(root);
+    }
+
+    /**
+     * 层序遍历
+     */
+    public void levelOrder() {
+        if (root == null) {
+            return;
+        }
+
+        Queue<Node> queue = new LinkedList<>();
+        queue.offer(root);
+
+        while (!queue.isEmpty()) {
+            Node node = queue.poll();
+            System.out.println(node.value);
+
+            if (node.left != null) {
+                queue.offer(node.left);
+            }
+            if (node.right != null) {
+                queue.offer(node.right);
+            }
+        }
+    }
+
+    /**
+     * @return 二分搜索树中最小的键
+     */
+    public Key minimum() {
+        assert counter > 0;
+        Node min = minimum(root);
+        return min.key;
+    }
+
+    /**
+     * @return 二分搜索树中最大的键
+     */
+    public Key maximum() {
+        assert counter > 0;
+        Node max = maximum(root);
+        return max.key;
+    }
+
+    /**
+     * 删除二分搜索树中最小键值的点
+     */
+    public void removeMin() {
+        if (root != null) {
+            root = removeMin(root);
+        }
+    }
+
+    /**
+     * 删除二分搜索树中最大键值的点
+     */
+    public void removeMax() {
+        if (root != null) {
+            root = removeMax(root);
+        }
     }
 
     /**
@@ -202,6 +265,45 @@ public class BST<Key extends Comparable<Key>, Value> {
         }
     }
 
+    private Node minimum(Node node) {
+        if (node.left == null) {
+            return node;
+        }
+
+        return minimum(node.left);
+    }
+
+    private Node maximum(Node node) {
+        if (node.right == null) {
+            return node;
+        }
+
+        return maximum(node.right);
+    }
+
+    private Node removeMin(Node node) {
+        if (node.left == null) {
+            Node rightNode = node.right;
+            node.right = null;
+            counter--;
+            return rightNode;
+        }
+
+        node.left = removeMin(node.left);
+        return node;
+    }
+
+    private Node removeMax(Node node) {
+        if (node.right == null) {
+            Node left = node.left;
+            node.left = null;
+            counter--;
+            return left;
+        }
+
+        node.right = removeMax(node.right);
+        return node;
+    }
 
     // 测试二分搜索树的前中后序遍历
     public static void main(String[] args) {
@@ -234,6 +336,11 @@ public class BST<Key extends Comparable<Key>, Value> {
         // 测试二分搜索树的后序遍历 postOrder
         System.out.println("postOrder: ");
         bst.postOrder();
+        System.out.println();
+
+        // 测试二分搜索树的后序遍历 levelOrder
+        System.out.println("levelOrder: ");
+        bst.levelOrder();
         System.out.println();
     }
 }
