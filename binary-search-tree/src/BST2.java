@@ -317,7 +317,7 @@ public class BST2<Key extends Comparable<Key>, Value> {
                     return node;
                 }
                 else {
-                    return null;
+                    return right;
                 }
             }
             parent = i;
@@ -344,7 +344,9 @@ public class BST2<Key extends Comparable<Key>, Value> {
                     parent.right = left;
                     return node;
                 }
-                return null;
+                else {
+                    return left;
+                }
             }
             parent = i;
             i = i.right;
@@ -427,15 +429,18 @@ public class BST2<Key extends Comparable<Key>, Value> {
 
         BST2<Integer, Integer> bst = new BST2<>();
 
-        int N = 10;
+        int N = 10000;
+        // Integer[] testAry = {9, 4, 3, 6, 1, 7};
         for(int i = 0 ; i < N ; i ++){
             Integer key = new Integer((int)(Math.random()*N));
+        //  Integer key = testAry[i];
             bst.insert(key, key);
         }
 
         Integer order[] = new Integer[N];
         for( int i = 0 ; i < N ; i ++ )
             order[i] = new Integer(i);
+        // Integer[] order = {3, 4, 6, 7, 9, 1};
 
         // 打乱order数组的顺序
         for(int i = order.length-1 ; i >= 0 ; i --){
@@ -445,6 +450,8 @@ public class BST2<Key extends Comparable<Key>, Value> {
             order[i] = t;
         }
 
+        System.out.println("Initial order:");
+        bst.levelOrder();
         System.out.println("Initial size = " + bst.size() );
 
         // 乱序删除[0...n)范围里的所有元素
@@ -452,10 +459,11 @@ public class BST2<Key extends Comparable<Key>, Value> {
             if( bst.contain( order[i] )){
                 bst.remove( order[i] );
                 System.out.println("After remove " + order[i] + " size = " + bst.size() );
+                //bst.levelOrder();
             }
 
         // 最终整个二分搜索树应该为空
-        System.out.println(bst.size());
+        System.out.println("size = " + bst.size());
 
     }
 }
