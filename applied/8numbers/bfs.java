@@ -13,10 +13,7 @@ import java.util.Arrays;
 public class bfs {
 
     // 状态树最大规模，即 9! = 362880
-    final static Integer MAXSIZE = 362880;
-
-    // 目标局面
-    final static Integer[] end = {1, 2, 3, 4, 5, 6, 7, 8, 0};
+    final static Integer MAXSIZE = 362881;
 
     // 移动误差，顺序为 上下左右移
     final static Integer[] dx = {0, 0, -1, 1};
@@ -54,7 +51,6 @@ public class bfs {
 
     // 用 rear 标记数组结尾
     private static Integer rear;
-
 
     private bfs() {}
 
@@ -153,8 +149,12 @@ public class bfs {
     }
 
     public static void main(String[] args) {
-        Integer[] start = {0,2,5,4,3,6,1,7,8};
+        Integer[] start = {0,1,5,4,6,8,3,7,2};
+        Integer[] end = {1, 2, 3, 4, 5, 6, 7, 8, 0};
         String result = serach(start, end);
         System.out.println(result);
+        if (!result.equals("hasn't solution")) {
+            System.out.println("size = " + result.length());
+        }
     }
 }
