@@ -6,7 +6,7 @@ import java.util.Arrays;
  *
  * 八数码问题
  *
- * BFS 广度优先搜索
+ * BFS + Hash
  *
  **/
 
