@@ -11,7 +11,7 @@
 
 ### BFS + HASH
 
-[代码-JAVA]()
+[代码-JAVA](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/applied/8numbers/bfs.java)
 
 该方法的重点在于判断重复局面，如果采用 HashSet 等红黑树进行遍历判断的话，时间复杂度为 O(logn)，因此需要设计一个哈希函数，将判重时间复杂度缩短为 O(n)。
 
