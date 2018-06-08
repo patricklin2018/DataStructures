@@ -13,7 +13,7 @@
 
 | 问题 | 描述 | 分类 | 链接 |
 |---|---|---|---|
-| Number K  | 求任意数组的第K大元素 | 数组、快排 | [numberK](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/applied/numberK)|
+| Number K  | 求任意数组的第K大元素 | 数组、快排 | [NumberK](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/applied/numberK)|
 | 八数码问题  | 寻找目标局面的最短路径 | 树、BFS、A* | [8 Numbers](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/applied/8numbers)|
 ## LeetCode
 
