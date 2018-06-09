@@ -2,7 +2,12 @@
  * @author Patrick-lenovo
  * @create 2018/6/8 0:29
  *
- * 简单并查集
+ * Union Find
+ *
+ * Quick Find 版本
+ *
+ * find 时间复杂度 = O(1)
+ * union 时间复杂度 = O(n)
  *
  **/
 
@@ -54,13 +59,5 @@ public class UnionFind1 {
                 id[i] = qId;
             }
         }
-    }
-
-    public static void main(String[] args) {
-
-        int n = 1000000;
-
-        // 虽然isConnected只需要O(1)的时间, 但由于union操作需要O(n)的，那么测试过程的 n 次操作，总共的算法复杂度是O(n^2)。
-        UnionFindTestHelper.testUF1(n);
     }
 }
