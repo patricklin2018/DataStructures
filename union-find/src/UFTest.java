@@ -10,14 +10,16 @@ public class UFTest {
 
     public static void main (String[] args) {
 
-        int N = 100000;
+        int N = 10000;
 
         int[] a = UnionFindTestHelper.generateRandomArray(N, 0, N - 1);
         int[] b = UnionFindTestHelper.generateRandomArray(N, 0, N - 1);
         int[] c = UnionFindTestHelper.generateRandomArray(N, 0, N - 1);
         int[] d = UnionFindTestHelper.generateRandomArray(N, 0, N - 1);
 
+        System.out.println("N = " + N + " 次 union 和 isConnected 操作，消耗时间如下：");
         UnionFindTestHelper.testUF("UnionFind1", a, b, c, d);
         UnionFindTestHelper.testUF("UnionFind2", a, b, c, d);
+        UnionFindTestHelper.testUF("UnionFind3", a, b, c, d);
     }
 }
