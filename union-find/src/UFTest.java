@@ -18,8 +18,8 @@ public class UFTest {
         int[] d = UnionFindTestHelper.generateRandomArray(N, 0, N - 1);
 
         System.out.println("N = " + N + " 次 union 和 isConnected 操作，消耗时间如下：");
-        UnionFindTestHelper.testUF("UnionFind1", a, b, c, d);
-        UnionFindTestHelper.testUF("UnionFind2", a, b, c, d);
+        //UnionFindTestHelper.testUF("UnionFind1", a, b, c, d);
+        //UnionFindTestHelper.testUF("UnionFind2", a, b, c, d);
         UnionFindTestHelper.testUF("UnionFind3", a, b, c, d);
         UnionFindTestHelper.testUF("UnionFind4", a, b, c, d);
         UnionFindTestHelper.testUF("UnionFind5", a, b, c, d);
