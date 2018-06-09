@@ -11,15 +11,19 @@
 
 ### BFS + HASH
 
-[代码-JAVA](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/applied/8numbers/bfs.java)
+| 代码 |
+|---|
+| [JAVA](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/applied/8numbers/bfs.java) |
+| [C++](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/applied/8numbers/bfs.cpp) |
+
 
 该方法的重点在于判断重复局面，如果采用 HashSet 等红黑树进行遍历判断的话，时间复杂度为 O(logn)，因此需要设计一个哈希函数，将判重时间复杂度缩短为 O(n)。
 
 由于共有 `9！ = 362880` 种局面，因此，哈希函数设计为：
 
 ``` JAVA
-// 状态树最大规模，即 9! = 362880
-final static Integer MAXSIZE = 362881;
+// 状态树最大规模 9! = 362880
+final static Integer MAXSIZE = 1000003;
 
 /**
 * 获得局面对应的哈希值
