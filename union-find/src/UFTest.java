@@ -10,7 +10,7 @@ public class UFTest {
 
     public static void main (String[] args) {
 
-        int N = 10000;
+        int N = 100009;
 
         int[] a = UnionFindTestHelper.generateRandomArray(N, 0, N - 1);
         int[] b = UnionFindTestHelper.generateRandomArray(N, 0, N - 1);
@@ -21,5 +21,6 @@ public class UFTest {
         UnionFindTestHelper.testUF("UnionFind1", a, b, c, d);
         UnionFindTestHelper.testUF("UnionFind2", a, b, c, d);
         UnionFindTestHelper.testUF("UnionFind3", a, b, c, d);
+        UnionFindTestHelper.testUF("UnionFind4", a, b, c, d);
     }
 }
