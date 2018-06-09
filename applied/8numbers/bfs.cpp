@@ -75,7 +75,7 @@ public:
 						return getPath(rear);
 					}
 					
-						// 查重
+					// 查重
 					if (!isVisited[tmpHashCode]) {
 						states[rear] = new State(tmp, head, stepChar[j]);
 						isVisited[tmpHashCode] = true;
