@@ -4,10 +4,11 @@
 
 | 问题  | 链接 |
 |---|---|
-|  排序问题 | [Sort](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/sort) |
-|  堆问题 | [Heap](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/heap) |
+|  排序 | [Sort](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/sort) |
+|  堆 | [Heap](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/heap) |
 |  二分搜索树 | [Binary-Search-Tree](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/binary-search-tree) |
 |  并查集 | [Union-Find](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/union-find) |
+|  图 | [Graph](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/graph) |
 
 ## 算法应用问题
 
