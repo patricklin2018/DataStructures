@@ -27,6 +27,6 @@
 
 | 数据 | 备注 | 链接 |
 |---|---|---|
-| testG1 | 无权图 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/nonweightedGraph/src/testG1.txt) |
-| testG2 | 无权图 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/nonweightedGraph/src/testG2.txt) ||
-| testG3 | 带权图 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/nonweightedGraph/src/testG3.txt) |
+| testG1 | 无权图 | [testG1.txt](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/nonweightedGraph/src/testG1.txt) |
+| testG2 | 无权图 | [testG2.txt](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/nonweightedGraph/src/testG2.txt) ||
+| testG3 | 带权图 | [testG3.txt](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/nonweightedGraph/src/testG3.txt) |
