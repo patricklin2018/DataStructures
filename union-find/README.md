@@ -2,7 +2,7 @@
 
 ### 实现
 
-| 问题 | 备注 | 链接 |
+| 问题 | 备注 | 代码 |
 |---|---|---|
 | UnionFindTestHelper | 并查集测试辅助类 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/union-find/src/UnionFindTestHelper.java) |
 | UnionFind1 | uick find 版本，union 和 isConnected 分别为 O(n) 和 O(1) 的时间复杂度 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/union-find/src/UnionFind1.java) |

@@ -39,6 +39,14 @@ public class MinHeap<Item extends Comparable> {
         }
     }
 
+    /*
+        查询堆是否为空
+        若空，返回 true，否则返回 false
+     */
+    public boolean isEmpty() {
+        return counter == 0;
+    }
+
     public void insert(Item item) {
         assert counter + 1 <= capacity;
 
