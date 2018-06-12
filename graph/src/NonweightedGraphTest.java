@@ -2,18 +2,19 @@
  * @author Patrick-lenovo
  * @create 2018/6/10 13:55
  *
- * 分别采用 DenseGraph 和 SparseGraph 存储 testG1.txt 和 testG2.txt 的图
+ * 无权图测试
+ * 借助 ReadGraphHelper,分别采用 DenseNonweightedGraph 和 SparseNonweightedGraph 存储 testG1.txt 和 testG2.txt 的图
  *
  **/
 
-public class DenseAndSparseGraph {
+public class NonweightedGraphTest {
 
     public static void main(String[] args) {
 
         String filename = "graph/src/testG1.txt";
-        DenseGraph g1 = new DenseGraph(13, false);
-        ReadGraphHelper readGraph1 = new ReadGraphHelper(g1, filename);
-        System.out.println("test G1 in Dense Graph:");
+        DenseNonweightedGraph g1 = new DenseNonweightedGraph(13, false);
+        ReadGraphHelper.readNonWeightedGraph(g1, filename);
+        System.out.println("test G1 in Dense NonweightedGraph:");
         g1.show();
 
         Component c1 = new Component(g1);
@@ -26,9 +27,9 @@ public class DenseAndSparseGraph {
         System.out.println();
 
 
-        SparseGraph g2 = new SparseGraph(13, false);
-        ReadGraphHelper readGraph2 = new ReadGraphHelper(g2, filename);
-        System.out.println("test G1 in Sparse Graph:");
+        SparseNonweightedGraph g2 = new SparseNonweightedGraph(13, false);
+        ReadGraphHelper.readNonWeightedGraph(g2, filename);
+        System.out.println("test G1 in Sparse NonweightedGraph:");
         g2.show();
 
         Component c2 = new Component(g2);
@@ -41,9 +42,9 @@ public class DenseAndSparseGraph {
         System.out.println();
 
         filename = "graph/src/testG2.txt";
-        DenseGraph g3 = new DenseGraph(6, false);
-        ReadGraphHelper readGraph3 = new ReadGraphHelper(g3, filename);
-        System.out.println("test G2 in Dense Graph:");
+        DenseNonweightedGraph g3 = new DenseNonweightedGraph(6, false);
+        ReadGraphHelper.readNonWeightedGraph(g3, filename);
+        System.out.println("test G2 in Dense NonweightedGraph:");
         g1.show();
 
         Component c3 = new Component(g3);
@@ -55,9 +56,9 @@ public class DenseAndSparseGraph {
         }
         System.out.println();
 
-        SparseGraph g4 = new SparseGraph(6, false);
-        ReadGraphHelper readGraph4 = new ReadGraphHelper(g4, filename);
-        System.out.println("test G2 in Sparse Graph:");
+        SparseNonweightedGraph g4 = new SparseNonweightedGraph(6, false);
+        ReadGraphHelper.readNonWeightedGraph(g4, filename);
+        System.out.println("test G2 in Sparse NonweightedGraph:");
         g2.show();
 
         Component c4 = new Component(g4);

@@ -16,21 +16,23 @@ import java.util.Scanner;
  **/
 
 public class ReadGraphHelper {
-    private Scanner scanner;
+    private static Scanner scanner;
 
-    public ReadGraphHelper(Graph graph, String filename) {
+    private ReadGraphHelper() {}
+
+    public static void readNonWeightedGraph(NonweightedGraph nonweightedGraph, String filename) {
         readFile(filename);
 
         try {
             int V = scanner.nextInt();
             if (V < 0) {
-                throw new IllegalArgumentException("number of vertices in a Graph must be nonnegative");
+                throw new IllegalArgumentException("number of vertices in a NonweightedGraph must be nonnegative");
             }
-            assert V == graph.V();
+            assert V == nonweightedGraph.V();
 
             int E = scanner.nextInt();
             if (E < 0) {
-                throw new IllegalArgumentException("number of edges in a Graph must be nonnegative");
+                throw new IllegalArgumentException("number of edges in a NonweightedGraph must be nonnegative");
             }
 
             for (int i = 0; i < E; i++) {
@@ -38,7 +40,7 @@ public class ReadGraphHelper {
                 int w = scanner.nextInt();
                 assert v >= 0 && v < V;
                 assert w >= 0 && w < V;
-                graph.addEdge(v, w);
+                nonweightedGraph.addEdge(v, w);
             }
         }
         catch (InputMismatchException e) {
@@ -50,7 +52,41 @@ public class ReadGraphHelper {
         }
     }
 
-    private void readFile(String filename) {
+    // 这里限定 double 权值类型
+    public static void readWeightedGraph(WeightedGraph<Double> graph, String filename) {
+        readFile(filename);
+
+        try {
+            int V = scanner.nextInt();
+            if (V < 0) {
+                throw new IllegalArgumentException("number of vertices in a NonweightedGraph must be nonnegative");
+            }
+            assert V == graph.V();
+
+            int E = scanner.nextInt();
+            if (E < 0) {
+                throw new IllegalArgumentException("number of edges in a NonweightedGraph must be nonnegative");
+            }
+
+            for (int i = 0; i < E; i++) {
+                int v = scanner.nextInt();
+                int w = scanner.nextInt();
+                Double wt = scanner.nextDouble();
+                assert v >= 0 && v < V;
+                assert w >= 0 && w < V;
+                graph.addEdge(new Edge<>(v, w, wt));
+            }
+        }
+        catch (InputMismatchException e) {
+            String token = scanner.next();
+            throw new InputMismatchException("attempts to read an 'int' value from input stream, but the next token is \"" + token + "\"");
+        }
+        catch (NoSuchElementException e) {
+            throw new NoSuchElementException("attemps to read an 'int' value from input stream, but there are no more tokens available");
+        }
+    }
+
+    private static void readFile(String filename) {
         assert filename != null;
         try {
             File file = new File(filename);

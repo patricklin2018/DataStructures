@@ -11,7 +11,7 @@ import java.util.Vector;
  **/
 
 public class Path {
-    private Graph g;
+    private NonweightedGraph g;
     private int s;
     private boolean[] visited;
     private int[] from;
@@ -22,7 +22,7 @@ public class Path {
     /*
         求出图 g 从 s 点开始到其它所有点的路径
      */
-    public Path(Graph g, int s) {
+    public Path(NonweightedGraph g, int s) {
         this.g = g;
         assert s >= 0 && s < g.V();
         this.s = s;

@@ -7,7 +7,7 @@ import java.util.Vector;
  * 稠密图 - 邻接矩阵实现
  *
  **/
-public class DenseGraph implements Graph{
+public class DenseNonweightedGraph implements NonweightedGraph {
     // 节点数
     private int n;
     // 边数
@@ -17,7 +17,7 @@ public class DenseGraph implements Graph{
     // 图数据
     private boolean[][] g;
 
-    public DenseGraph(int n, boolean directed) {
+    public DenseNonweightedGraph(int n, boolean directed) {
         assert n > 0;
 
         this.n = n;
@@ -53,7 +53,7 @@ public class DenseGraph implements Graph{
         }
 
         g[v][w] = true;
-        if (!directed) {
+        if (!directed && v != w) {
             g[w][v] = true;
         }
 

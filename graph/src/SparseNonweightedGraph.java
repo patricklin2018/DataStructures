@@ -8,13 +8,13 @@ import java.util.Vector;
  *
  **/
 
-public class SparseGraph implements Graph{
+public class SparseNonweightedGraph implements NonweightedGraph {
     private int n;
     private int m;
     private boolean directed;
     private Vector<Integer>[] g;
 
-    public SparseGraph(int n, boolean directed) {
+    public SparseNonweightedGraph(int n, boolean directed) {
         this.n = n;
         this.m = 0;
         this.directed = directed;

@@ -1,4 +1,4 @@
-public interface Graph {
+public interface NonweightedGraph {
     // 返回顶点数量
     int V();
     // 返回边数量

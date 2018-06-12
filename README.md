@@ -8,7 +8,7 @@
 |  堆 | [Heap](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/heap) |
 |  二分搜索树 | [Binary-Search-Tree](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/binary-search-tree) |
 |  并查集 | [Union-Find](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/union-find) |
-|  图 | [Graph](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/graph) |
+|  图 | [NonweightedGraph](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/nonweightedGraph) |
 
 ## 算法应用问题
 

@@ -11,7 +11,7 @@ import java.util.Stack;
  **/
 
 public class Component {
-    Graph g;
+    NonweightedGraph g;
     // 记录访问过的数组
     private boolean[] isVisited;
     // 联通分量个数
@@ -19,8 +19,8 @@ public class Component {
     // 每个节点所对应的联通分量标记
     private int[] id;
 
-    public Component(Graph graph) {
-        g = graph;
+    public Component(NonweightedGraph nonweightedGraph) {
+        g = nonweightedGraph;
 
         int verticeSize = g.V();
 
