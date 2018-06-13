@@ -78,7 +78,7 @@ public class LazyPrimMST<Weight extends Number & Comparable> {
         测试
      */
     public static void main (String[] args) {
-        String filename = "graph/src/testG3.txt";
+        String filename = "graph/data/testG3.txt";
         int V = 8;
 
         SparseWeightedGraph<Double> g = new SparseWeightedGraph<>(V, false);

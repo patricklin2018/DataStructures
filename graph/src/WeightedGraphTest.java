@@ -9,7 +9,7 @@
 public class WeightedGraphTest {
 
     public static void main(String[] args) {
-        String filename = "graph/src/testG3.txt";
+        String filename = "graph/data/testG3.txt";
 
         DenseWeightedGraph<Double> g1 = new DenseWeightedGraph<>(8, false);
         ReadGraphHelper.readWeightedGraph(g1, filename);

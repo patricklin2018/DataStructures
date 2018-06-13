@@ -1,27 +1,25 @@
 import java.util.Arrays;
 
 /**
- * Created by Patrick
- * 2018/5/29 15:15
+ * @author Patrick-lenovo
+ * @create 2018/6/13 0:52
  *
- * 最大索引堆
+ * 最小索引堆
  *
  * 增加索引，堆的调整交换索引值，而不是交换元素值。
  *
  * 通过 indexes 数组，堆下标找到索引
  * 通过 reverse 数组，索引找到堆下标
- */
-
-public class IndexMaxHeap<Item extends Comparable> {
-
+ *
+ **/
+public class IndexMinHeap<Item extends Comparable> {
     protected Item[] data;
     protected int[] indexes;
     protected int[] reverse;
     protected int counter;
     protected int capacity;
 
-
-    private IndexMaxHeap(int capacity) {
+    public IndexMinHeap(int capacity) {
         data = (Item[]) new Comparable[capacity + 1];
         indexes = new int[capacity + 1];
         reverse = new int[capacity + 1];
@@ -75,7 +73,7 @@ public class IndexMaxHeap<Item extends Comparable> {
         shiftUp(counter);
     }
 
-    public Item extractMax() {
+    public Item extractMin() {
         assert counter > 0;
 
         Item ret = data[indexes[1]];
@@ -91,7 +89,7 @@ public class IndexMaxHeap<Item extends Comparable> {
     /**
      * @return 最大索引堆中堆顶的索引
      */
-    public int extracMaxIndex() {
+    public int extracMinxIndex() {
         assert counter > 0;
 
         int ret = indexes[1];
@@ -104,7 +102,7 @@ public class IndexMaxHeap<Item extends Comparable> {
     /**
      * @return 索引堆的堆顶元素
      */
-    public Item getMax() {
+    public Item getMin() {
         assert counter > 0;
 
         return data[indexes[1]];
@@ -137,11 +135,9 @@ public class IndexMaxHeap<Item extends Comparable> {
      */
     public void change(int i, Item item) {
 
+        assert contain(i);
+
         i += 1;
-
-        assert i <= capacity;
-        assert i >= 1 && i <= counter;
-
         data[i] = item;
 
         shiftUp(reverse[i]);
@@ -156,7 +152,7 @@ public class IndexMaxHeap<Item extends Comparable> {
 
         int e = indexes[k];
 
-        while (k > 1 && data[indexes[k / 2]].compareTo(data[e]) < 0) {
+        while (k > 1 && data[indexes[k / 2]].compareTo(data[e]) > 0) {
             indexes[k] = indexes[k / 2];
             reverse[indexes[k]] = k;
             k /= 2;
@@ -176,15 +172,15 @@ public class IndexMaxHeap<Item extends Comparable> {
 
         while (k * 2 <= counter) {
             int j = k * 2;
-            if (j + 1 <= counter && data[indexes[j + 1]].compareTo(data[indexes[j]]) > 0) {
+            if (j + 1 <= counter && data[indexes[j + 1]].compareTo(data[indexes[j]]) < 0) {
                 j++;
             }
 
-            if (data[e].compareTo(data[indexes[j]]) > 0) {
+            if (data[e].compareTo(data[indexes[j]]) <= 0) {
                 break;
             }
 
-            indexes[k] = indexes[k / 2];
+            indexes[k] = indexes[j];
             reverse[indexes[k]] = k;
             k = j;
         }
@@ -242,14 +238,12 @@ public class IndexMaxHeap<Item extends Comparable> {
         return true;
     }
 
-    // 测试 IndexMaxHeap
+    // 测试 IndexMinHeap
     public static void main(String[] args) {
-
-        int N = 10;
-        IndexMaxHeap<Integer> indexMaxHeap = new IndexMaxHeap<Integer>(N);
+        int N = 1000000;
+        IndexMinHeap<Integer> indexMinHeap = new IndexMinHeap<>(N);
         for( int i = 0 ; i < N ; i ++ )
-            indexMaxHeap.insert( i , (int)(Math.random()*N) );
-        assert indexMaxHeap.testIndexes();
-        System.out.println("测试通过!");
+            indexMinHeap.insert( i , (int)(Math.random()*N) );
+        assert indexMinHeap.testIndexes();
     }
 }

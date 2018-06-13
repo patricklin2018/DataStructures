@@ -11,7 +11,7 @@ public class NonweightedGraphTest {
 
     public static void main(String[] args) {
 
-        String filename = "graph/src/testG1.txt";
+        String filename = "graph/data/testG1.txt";
         DenseNonweightedGraph g1 = new DenseNonweightedGraph(13, false);
         ReadGraphHelper.readNonWeightedGraph(g1, filename);
         System.out.println("test G1 in Dense NonweightedGraph:");
