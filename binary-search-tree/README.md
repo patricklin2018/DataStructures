@@ -12,7 +12,7 @@
 
 ### 实现
 
-|  算法  | 备注 | 代码 |
+|  问题  | 备注 | 代码 |
 |---|---|---|
 | BinarySearch | 二分搜索（递归实现：查找、floor、ceil） | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/binary-search-tree/src/BinarySearch.java)|
 | BinarySearc2 | 二分搜索（非递归实现：查找、floor、ceil）|[Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/binary-search-tree/src/BinarySearch2.java)|

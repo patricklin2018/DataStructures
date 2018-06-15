@@ -16,7 +16,7 @@
 
 ##### 1.1 基础排序(时间复杂度 = O(n^2))
 
-|  算法  | 备注 | 代码 |
+|  问题  | 备注 | 代码 |
 |---|---|---|
 |  SelectionSort | 选择排序 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/sort/src/SelectionSort.java)|
 | SelectionSort2 | 同时寻找最大、最小值的索引|[Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/sort/src/SelectionSort2.java)|
@@ -26,7 +26,7 @@
 
 ##### 1.1 高级排序(时间复杂度 = O(nlogn))
 
-|  算法  | 备注 | 代码 |
+|  问题  | 备注 | 代码 |
 |---|---|---|
 |  ShellSort | 希尔排序 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/sort/src/ShellSort.java)|
 | MergeSort | 归并排序 |[Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/sort/src/MergeSort.java)|
@@ -42,7 +42,7 @@
 
 #### 2. 堆
 
-| 算法 | 备注 | 链接 |
+| 问题 | 备注 | 链接 |
 |---|---|---|
 | MaxHeap | 构建最大堆 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/heap/src/MaxHeap.java) |
 | PrintableMaxHeap | 打印堆结构辅助类 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/heap/src/PrintableMaxHeap.java) |
