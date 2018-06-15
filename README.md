@@ -1,6 +1,6 @@
 # DataStructures
 
-#### 问题分类链接
+### 问题分类链接
 
 | 问题  | 链接 |
 |---|---|
@@ -10,9 +10,11 @@
 |  并查集 | [Union-Find](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/union-find) |
 |  图 | [Graph](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/graph) |
 
-#### 具体问题：
+### 具体问题：
 
-##### 1. 排序
+#### 1. 排序
+
+##### 1.1 基础排序(时间复杂度 = O(n^2))
 
 |  算法  | 备注 | 代码 |
 |---|---|---|
@@ -21,6 +23,11 @@
 | InsertionSort | 插入排序 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/sort/src/InsertionSort.java)|
 | BubbleSort | 冒泡排序 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/sort/src/BubbleSort.java) |
 | BubbleSort2 | 记录上一次冒泡终止位置，下一轮对其之后元素进行忽略 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/sort/src/BubbleSort2.java)|
+
+##### 1.1 高级排序(时间复杂度 = O(nlogn))
+
+|  算法  | 备注 | 代码 |
+|---|---|---|
 |  ShellSort | 希尔排序 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/sort/src/ShellSort.java)|
 | MergeSort | 归并排序 |[Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/sort/src/MergeSort.java)|
 | MergeSort2 | 1,小规模数据直接插入排序 2,省略部分 merge 计算 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/sort/src/MergeSort2.java)|
@@ -33,7 +40,7 @@
 | HeapSort2 | 通过 Heapfiy 数组建堆替代一个个元素进堆 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/heap/src/HeapSort2.java)|
 | HeapSort3 | 将堆转数组，省略出堆到数组的额外空间 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/heap/src/HeapSort3.java)|
 
-##### 2. 堆
+#### 2. 堆
 
 | 算法 | 备注 | 链接 |
 |---|---|---|
@@ -45,7 +52,7 @@
 | IndexMaxHeap | 最大索引堆，增加索引，替代直接的数据交换 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/heap/src/IndexMaxHeap.java)|
 | MinHeap | 最小堆 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/tree/master/heap/src/MinHeap.java)|
 
-##### 3. 二分搜索树
+#### 3. 二分搜索树
 
 |  算法  | 备注 | 代码 |
 |---|---|---|
@@ -55,7 +62,7 @@
 | BST2 | 二分搜索树（非递归实现:深度优先[前中后序遍历]、广度优先[层次遍历]、Hubbard Deletion等） | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/binary-search-tree/src/BST2.java) |
 | BSTandSST | 二分搜索树和顺序查找表在搜索时间的效率比较 | [BSTandSST](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/binary-search-tree/src/BSTandSST)|
 
-##### 4. 并查集
+#### 4. 并查集
 
 | 问题 | 备注 | 代码 |
 |---|---|---|
@@ -68,9 +75,9 @@
 | UnionFind6 | 执行 find 操作时，增加Path Compression 路径压缩优化树深，第二种压缩方式 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/union-find/src/UnionFind6.java) |
 | UFTest | 借用UnionFindTestHelper对UF1和UF2两个版本进行时间效率比较 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/union-find/src/UFTest.java) |
 
-##### 5. 图
+#### 5. 图
 
-###### 5.1 无权图
+##### 5.1 无权图
 
 | 问题 | 备注 | 代码 |
 |---|---|---|
@@ -82,7 +89,7 @@
 | Component | 采用 DFS 求联通分量 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/Component.java) |
 | Path | 采用 BFS 求最短路径 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/Path.java) |
 
-###### 5.2 带权图
+##### 5.2 带权图
 
 | 问题 | 备注 | 代码 |
 |---|---|---|
@@ -91,7 +98,7 @@
 | SparseWeightedGraph | 用邻接表存储稀疏图 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/SparseWeightedGraph.java) ||
 | WeightedGraphTest | 借助 ReadGraphHelper 测试 DenseWeightedGraph 和 SparseWeightedGraph | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/WeightedGraphTest.java) |
 
-###### 5.2 最小生成树
+##### 5.2 最小生成树
 
 | 问题 | 备注 | 代码 |
 |---|---|---|
@@ -99,7 +106,7 @@
 | Prim | 普里姆优化-采用最小索引堆，仅维护最小权值的横切边，而不是将访问过的顶点的所有边加入堆 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/LazyPrimMST2.java) |
 | PrimAndPrim2 | 对 Lazy Prim 和 Lazy Prim2 于时间效率上进行比较 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/PrimAndPrim2.java) |
 
-## 算法应用问题
+### 算法应用问题
 
 | 问题 | 描述 | 分类 | 链接 |
 |---|---|---|---|
