@@ -48,6 +48,7 @@
 ```
 
 以上，在时间复杂度上的对比：
+
 | 最小生成树算法 | 时间复杂度 | 
 |---|---|
 | Lazy Prim | O(ElogE)  |
@@ -55,6 +56,7 @@
 | Kruskal | O(ElogE)  |
 
 实现
+
 | 问题 | 备注 | 代码 |
 |---|---|---|
 | Lazy Prim | 普利姆最小生成树方法 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/LazyPrimMST.java) |
