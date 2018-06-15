@@ -1,7 +1,7 @@
 # 堆问题
 
 ### 实现
-| 问题 | 备注 | 链接 |
+| 算法 | 备注 | 链接 |
 |---|---|---|
 | MaxHeap | 构建最大堆 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/heap/src/MaxHeap.java) |
 | PrintableMaxHeap | 打印堆结构辅助类 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/heap/src/PrintableMaxHeap.java) |
