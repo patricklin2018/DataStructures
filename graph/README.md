@@ -1,5 +1,7 @@
-# 图问题
-#### 无权图
+## 图问题
+
+### 无权图
+
 | 问题 | 备注 | 代码 |
 |---|---|---|
 | NonweightedGraph | 无权图接口 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/NonweightedGraph.java) |
@@ -10,7 +12,8 @@
 | Component | 采用 DFS 求联通分量 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/Component.java) |
 | Path | 采用 BFS 求最短路径 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/Path.java) |
 
-#### 带权图
+### 带权图
+
 | 问题 | 备注 | 代码 |
 |---|---|---|
 | WeightedGraph | 带权图接口 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/WeightedGraph.java) |
@@ -18,14 +21,20 @@
 | SparseWeightedGraph | 用邻接表存储稀疏图 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/SparseWeightedGraph.java) ||
 | WeightedGraphTest | 借助 ReadGraphHelper 测试 DenseWeightedGraph 和 SparseWeightedGraph | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/WeightedGraphTest.java) |
 
-#### 最小生成树问题
+### 最小生成树问题
 
-##### 背景知识：
+#### 背景知识：
 > 切分： 把图中的点划分为两个部分，成为一个切分
 >
 > 横切边： 一条边的两个端点属于切分中的不同部分
 > 
 > 切分定理： 给定任意切分，横切边的最小权值边必定属于最小生树
+
+| 最小生成树算法 | 时间复杂度 | 
+|---|---|
+| Lazy Prim | O(ElogE)  |
+| Prim | O(ElogV)  |
+| Kruskal | O(ElogE)  |
 
 ##### 1. Lazy Prim
 ```
@@ -47,21 +56,30 @@
 利用并查集作为辅助判断是否生成环
 ```
 
-以上，在时间复杂度上的对比：
+#### 实验对比：
 
-| 最小生成树算法 | 时间复杂度 | 
-|---|---|
-| Lazy Prim | O(ElogE)  |
-| Prim | O(ElogV)  |
-| Kruskal | O(ElogE)  |
+```
+Test LazyPrimMST:
+Consume 186ms.
+the mst weight result = 65.24072000000014
 
-实现
+Test PrimMST:
+Consume 47ms.
+the mst weight result = 65.24072000000014
+
+Test KruskalMST:
+Consume 123ms.
+the mst weight result = 65.24071999999985
+```
+
+#### 实现
 
 | 问题 | 备注 | 代码 |
 |---|---|---|
-| Lazy Prim | 普利姆最小生成树方法 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/LazyPrimMST.java) |
-| Prim | 普里姆优化-采用最小索引堆，仅维护最小权值的横切边，而不是将访问过的顶点的所有边加入堆 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/LazyPrimMST2.java) |
-| PrimAndPrim2 | 对 Lazy Prim 和 Lazy Prim2 于时间效率上进行比较 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/PrimAndPrim2.java) |
+| Lazy Prim | 普利姆最小生成树算法 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/LazyPrimMST.java) |
+| Prim | 普里姆优化-采用最小索引堆，仅维护最小权值的横切边，而不是将访问过的顶点的所有边加入堆 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/PrimMST.java) |
+| Kruskal | 克鲁斯卡尔最小生成树算法 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/PrimMST.java) |
+| MST | LazyPrim、Prim、Kruskal 时间效率上的比较 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/MST.java) |
 
 #### 测试数据
 

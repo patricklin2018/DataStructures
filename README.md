@@ -102,9 +102,10 @@
 
 | 问题 | 备注 | 代码 |
 |---|---|---|
-| Lazy Prim | 普利姆最小生成树方法 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/LazyPrimMST.java) |
-| Prim | 普里姆优化-采用最小索引堆，仅维护最小权值的横切边，而不是将访问过的顶点的所有边加入堆 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/LazyPrimMST2.java) |
-| PrimAndPrim2 | 对 Lazy Prim 和 Lazy Prim2 于时间效率上进行比较 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/PrimAndPrim2.java) |
+| Lazy Prim | 普利姆最小生成树算法 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/LazyPrimMST.java) |
+| Prim | 普里姆优化-采用最小索引堆，仅维护最小权值的横切边，而不是将访问过的顶点的所有边加入堆 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/PrimMST.java) |
+| Kruskal | 克鲁斯卡尔最小生成树算法 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/PrimMST.java) |
+| MST | LazyPrim、Prim、Kruskal 时间效率上的比较 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/MST.java) |
 
 ### 算法应用问题
 

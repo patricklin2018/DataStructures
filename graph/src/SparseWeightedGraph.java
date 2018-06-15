@@ -50,8 +50,8 @@ public class SparseWeightedGraph<Weight extends Number & Comparable> implements 
         }
 
         g[e.v()].add(new Edge(e));
-        if (directed && e.v() != e.w()) {
-            g[e.w()].add(new Edge<>(e));
+        if (!directed && e.v() != e.w()) {
+            g[e.w()].add(new Edge(e.w(), e.v(), e.wt()));
         }
 
         m++;

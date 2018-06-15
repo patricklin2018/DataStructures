@@ -4,14 +4,14 @@ import java.util.Vector;
  * @author Patrick-lenovo
  * @create 2018/6/13 0:49
  *
- * 使用 Lazy Prim 普里姆求解最小生成树 - 优化
+ * 基于 LazyPrim 普里姆的优化
  *
  * 采用最小索引堆代替最小堆，仅维护最小权值的横切边，而不是将所有横切边加入堆
  *
  * 将时间复杂度从 O(ElogE) 将为 O(ElogV)
  *
  **/
-public class LazyPrimMST2<Weight extends Number & Comparable> {
+public class PrimMST<Weight extends Number & Comparable> {
     // 图引用
     private WeightedGraph<Weight> G;
     // 最小索引堆
@@ -25,7 +25,7 @@ public class LazyPrimMST2<Weight extends Number & Comparable> {
     // 最小生成树的权值
     private Number mstWeight;
 
-    public LazyPrimMST2(WeightedGraph WG) {
+    public PrimMST(WeightedGraph WG) {
         G = WG;
         assert G.E() >= 1;
         imh = new IndexMinHeap<>(G.V());
@@ -84,15 +84,15 @@ public class LazyPrimMST2<Weight extends Number & Comparable> {
         利用 /data/testG4.txt 测试
      */
     public static void main (String[] args) {
-        String filename = "graph/data/testG4.txt";
-        int V = 10000;
+        String filename = "graph/data/testG3.txt";
+        int V = 8;
 
         SparseWeightedGraph<Double> g = new SparseWeightedGraph<>(V, false);
         ReadGraphHelper.readWeightedGraph(g, filename);
         System.out.println("the weighted graph is:");
         g.show();
 
-        LazyPrimMST2<Double> lz = new LazyPrimMST2<>(g);
+        PrimMST<Double> lz = new PrimMST<>(g);
         Vector<Edge<Double>> mst = lz.getMstEdges();
         int mstSz = mst.size();
         System.out.println("the mst result:");
