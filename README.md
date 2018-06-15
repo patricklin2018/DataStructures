@@ -1,4 +1,4 @@
-# DataStructures-Algorithmns
+# DataStructures
 
 ## 经典算法问题
 
