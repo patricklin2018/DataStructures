@@ -58,6 +58,7 @@
 
 #### 实验对比：
 
+采用 testG4.txt 数据对以下方法进行测试，其中包含 10000 个顶点，61731 条边。
 ```
 Test LazyPrimMST:
 Consume 186ms.
