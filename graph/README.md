@@ -94,7 +94,7 @@ the mst weight result = 65.24071999999985
 | 问题 | 备注 | 代码 |
 |---|---|---|
 | Dijkstra | 迪杰斯特拉最短路径算法 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/Dijkstra.java) |
-| BellmanFord | 贝尔曼福特最短路径算法 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/BellmamFord.java) |
+| BellmanFord | 贝尔曼福特最短路径算法 | [Java](https://github.com/patricklin2018/DataStructures/blob/master/graph/src/BellmanFord.java) |
 
 ### 测试数据
 
