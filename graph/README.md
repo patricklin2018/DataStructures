@@ -87,12 +87,14 @@ the mst weight result = 65.24071999999985
 | 最短路径算法 | 时间复杂度 | 备注 |
 |---|---|---|
 | Dijkstra | O(ElogV)  | 前提不能具有负权边 |
+| Bellman-Ford | O(EV)  | 可以有负权边，但不能具有负权环 |
 
 #### 实现
 
 | 问题 | 备注 | 代码 |
 |---|---|---|
 | Dijkstra | 迪杰斯特拉最短路径算法 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/Dijkstra.java) |
+| BellmanFord | 贝尔曼福特最短路径算法 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/BellmamFord.java) |
 
 ### 测试数据
 
@@ -103,3 +105,5 @@ the mst weight result = 65.24071999999985
 | testG3 | 带权图测试数据 | [testG3.txt](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/testG3.txt) |
 | testG3 | 带权图， 10000 个顶点， 61731条边 | [testG4.txt](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/testG4.txt) |
 | testG5 | 带权图有向图测试数据 | [testG5.txt](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/testG5.txt) |
+| testG6 | 不具有负权环的负权图 | [testG6.txt](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/testG6.txt) |
+| testG7 | 带负权环的负权图 | [testG7.txt](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/testG7.txt) |
