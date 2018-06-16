@@ -82,7 +82,19 @@ the mst weight result = 65.24071999999985
 | Kruskal | 克鲁斯卡尔最小生成树算法 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/PrimMST.java) |
 | MST | LazyPrim、Prim、Kruskal 时间效率上的比较 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/MST.java) |
 
-#### 测试数据
+### 最短路径问题
+
+| 最短路径算法 | 时间复杂度 | 备注 |
+|---|---|---|
+| Dijkstra | O(ElogV)  | 前提不能具有负权边 |
+
+#### 实现
+
+| 问题 | 备注 | 代码 |
+|---|---|---|
+| Dijkstra | 迪杰斯特拉最短路径算法 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/Dijkstra.java) |
+
+### 测试数据
 
 | 数据 | 备注 | 链接 |
 |---|---|---|
@@ -90,3 +102,4 @@ the mst weight result = 65.24071999999985
 | testG2 | 无权图测试数据 | [testG2.txt](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/testG2.txt) ||
 | testG3 | 带权图测试数据 | [testG3.txt](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/testG3.txt) |
 | testG3 | 带权图， 10000 个顶点， 61731条边 | [testG4.txt](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/testG4.txt) |
+| testG5 | 带权图有向图测试数据 | [testG5.txt](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/testG5.txt) |

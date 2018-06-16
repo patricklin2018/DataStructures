@@ -107,6 +107,12 @@
 | Kruskal | 克鲁斯卡尔最小生成树算法 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/PrimMST.java) |
 | MST | LazyPrim、Prim、Kruskal 时间效率上的比较 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/MST.java) |
 
+##### 5.3 最短路径
+
+| 问题 | 备注 | 代码 |
+|---|---|---|
+| Dijkstra | 迪杰斯特拉最短路径算法 | [Java](https://github.com/patricklin2018/DataStructures-Algorithmns/blob/master/graph/src/Dijkstra.java) |
+
 ### 算法应用问题
 
 | 问题 | 描述 | 分类 | 链接 |
